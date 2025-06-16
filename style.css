@@ -1,0 +1,224 @@
+/* style.css */
+
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Primary font */
+    line-height: 1.6;
+    color: #333;
+    padding-top: 56px; /* Adjust for fixed navbar height */
+}
+
+/* Navbar Styling */
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffffff;
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://via.placeholder.com/1920x1080?text=Kenspark+Hero+Image') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+}
+
+.hero-section .container {
+    z-index: 1; /* Ensure text is above overlay */
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    animation-delay: 0.5s; /* Example animation delay */
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    animation-delay: 0.8s;
+}
+
+.hero-section .btn {
+    animation-delay: 1.2s;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+}
+
+/* General Section Styling */
+section {
+    padding: 80px 0;
+}
+
+section:nth-of-type(even) {
+    background-color: #f8f9fa; /* Light gray background for alternating sections */
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #212529;
+}
+
+/* About Section */
+#about img {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Attractions Section */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* Ensures image corners are rounded */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #007bff;
+}
+
+/* Gallery Section */
+.carousel-item img {
+    max-height: 600px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #007bff;
+}
+
+/* Pricing Section */
+.pricing-card-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.pricing-card-title small {
+    font-size: 1.2rem;
+    color: #6c757d !important;
+}
+
+.card-header {
+    border-bottom: 0;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+/* Contact Section */
+#contact .card {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.social-icons a {
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+footer p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .hero-section .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+    .hero-section .btn {
+        font-size: 0.9rem;
+    }
+    .pricing-card-title {
+        font-size: 2.5rem;
+    }
+}
